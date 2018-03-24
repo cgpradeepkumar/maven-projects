@@ -35,6 +35,6 @@ public class IntegrationTest extends CamelTestSupport {
 		String content = context.getTypeConverter().convertTo(String.class, target);
 		
 		mockEndpoint.assertIsSatisfied();
-//		assertEquals(dvdBody.toUpperCase(), content);
+		assertEquals(dvdBody.toUpperCase(), content);
 	}
 }
