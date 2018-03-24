@@ -20,6 +20,8 @@ public class CamelStarter {
 			}
 		});
 
+		context.addRoutes(new IntegrationRoute());
+		
 		context.start();
 
 		Thread.sleep(5 * 60 * 1000);
