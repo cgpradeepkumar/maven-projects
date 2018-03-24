@@ -4,8 +4,8 @@ import org.apache.camel.builder.RouteBuilder;
 
 public class IntegrationRoute extends RouteBuilder {
 
-	private static final String input = "file:E:\\Temp\\camelTest\\transform";
-	private static final String output = "file:E:\\Temp\\camelTest\\output";
+	private static final String input = "file:orders/transform?noop=true";
+	private static final String output = "file:orders/output";
 
 	@Override
 	public void configure() throws Exception {
@@ -14,7 +14,7 @@ public class IntegrationRoute extends RouteBuilder {
 		.bean(new TransformationBean()).unmarshal().csv()
 		.split(body().tokenize(",")).choice()
 		.when(body().contains("DVD"))
-		.to(output);
+		.to(output).otherwise().to("mock:others");
 	}
 
 }

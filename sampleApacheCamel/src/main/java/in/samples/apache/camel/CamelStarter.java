@@ -6,8 +6,8 @@ import org.apache.camel.impl.DefaultCamelContext;
 
 public class CamelStarter {
 
-	private static final String input = "file:E:\\Temp\\camelTest\\input";
-	private static final String output = "file:E:\\Temp\\camelTest\\output";
+	private static final String input = "file:orders/input?noop=true";
+	private static final String output = "file:orders/output";
 
 	public static void main(String[] args) throws Exception {
 		CamelContext context = new DefaultCamelContext();
@@ -20,11 +20,11 @@ public class CamelStarter {
 			}
 		});
 
-		context.addRoutes(new IntegrationRoute());
+		//context.addRoutes(new IntegrationRoute());
 		
 		context.start();
 
-		Thread.sleep(5 * 60 * 1000);
+		Thread.sleep(5 * 60 * 100);
 
 		context.stop();
 	}
