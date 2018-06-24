@@ -1,4 +1,4 @@
-package in.sample.java.hello;
+package in.sample.java.features;
 
 import java.util.Arrays;
 import java.util.IntSummaryStatistics;
