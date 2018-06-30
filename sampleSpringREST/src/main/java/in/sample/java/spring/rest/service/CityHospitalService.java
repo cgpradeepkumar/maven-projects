@@ -1,32 +1,36 @@
 package in.sample.java.spring.rest.service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import in.sample.java.spring.rest.data.Hospital;
+import in.sample.java.spring.rest.data.HospitalRepository;
 
 @Service
 public class CityHospitalService implements HospitalService {
 
-	private List<Hospital> hospitalList = new ArrayList<>(Arrays.asList(
-
-			new Hospital(1001, "Apollo Hospital", "Chennai", 3.8),
-
-			new Hospital(1002, "Global Hospital", "Chennai", 3.5),
-
-			new Hospital(1003, "VCare Hospital", "Bangalore", 3)));
+	@Autowired
+	private HospitalRepository hospitalRepository;
 
 	@Override
 	public Hospital getHospital(int id) throws Exception {
-		return hospitalList.stream().filter(c -> (c.getId() == id)).findFirst().get();
+		Optional<Hospital> hospitals = hospitalRepository.findById(id);
+		return hospitals.get();
 	}
 
 	@Override
 	public List<Hospital> getAllHospitals() throws Exception {
-		return hospitalList;
+		List<Hospital> hospitals = new ArrayList<>();
+		Iterable<Hospital> hospitalList = hospitalRepository.findAll();
+		hospitalList.forEach(hospital -> {
+			hospitals.add(hospital);
+		});
+
+		return hospitals;
 	}
 
 }

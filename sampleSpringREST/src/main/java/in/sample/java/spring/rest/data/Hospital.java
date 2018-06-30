@@ -1,11 +1,19 @@
 package in.sample.java.spring.rest.data;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Hospital {
 
+	@Id
 	private int id;
 	private String name;
 	private String city;
 	private double rating;
+
+	public Hospital() {
+	}
 
 	public Hospital(int id, String name, String city, double rating) {
 		this.id = id;
