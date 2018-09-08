@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=in.sample.java -DartifactId=sampleConsumeNYTApi -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false

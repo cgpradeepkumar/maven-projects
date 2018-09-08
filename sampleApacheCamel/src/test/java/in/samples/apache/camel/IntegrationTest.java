@@ -14,8 +14,8 @@ public class IntegrationTest extends CamelTestSupport {
 	public void setUp() throws Exception {
 		super.setUp();
 		context.addRoutes(new IntegrationRoute());
-//		deleteDirectory("orders/transform");
-//		deleteDirectory("orders/output");
+		deleteDirectory("orders/transform");
+		deleteDirectory("orders/output");
 	}
 
 	@Test
