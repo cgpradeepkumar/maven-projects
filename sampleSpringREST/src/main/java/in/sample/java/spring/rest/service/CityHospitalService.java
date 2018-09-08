@@ -33,4 +33,18 @@ public class CityHospitalService implements HospitalService {
 		return hospitals;
 	}
 
+	@Override
+	public Hospital addHospital(Hospital hospital) throws Exception {
+		return hospitalRepository.save(hospital);
+	}
+
+	@Override
+	public void updateHospital(Hospital hospital) throws Exception {
+		hospitalRepository.save(hospital);
+	}
+
+	@Override
+	public void deleteHospital(Hospital hospital) throws Exception {
+		hospitalRepository.delete(hospital);
+	}
 }
