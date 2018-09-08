@@ -29,5 +29,8 @@ public class StringDemo {
         } else {
             System.out.println("not a.equals(c)");
         }
+
+        MyString myString = new MyString("Pradeep");
+        System.out.println(myString.getString());
     }
 }
