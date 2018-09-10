@@ -1,6 +1,8 @@
 package in.sample.java.string;
 
-public final class MyString {
+import java.io.Serializable;
+
+public final class MyString implements Serializable {
     private String string;
 
     public MyString(String string) {
