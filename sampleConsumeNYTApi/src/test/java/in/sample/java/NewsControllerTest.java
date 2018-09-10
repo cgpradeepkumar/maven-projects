@@ -4,6 +4,7 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,6 +37,11 @@ public class NewsControllerTest {
 				.andExpect(MockMvcResultMatchers.jsonPath("$.title").exists())
 				.andExpect(MockMvcResultMatchers.jsonPath("$.section").exists());
 
+	}
+
+	@Test
+	public void methodTest() {
+		Assert.assertTrue(true);
 	}
 
 }
