@@ -18,6 +18,7 @@ public class SupplierDemo {
 	 * 
 	 * Write a program to add the above to a collection using Consumer interface and
 	 * print all using Supplier interface. Use only lambda functions.
+	 *
 	 */
 	public static void main(String[] args) {
 
