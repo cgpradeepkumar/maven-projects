@@ -27,6 +27,7 @@ public class SupplierDemo {
 			list.add("Cheese Sandwich");
 			list.add("Corn sandwich");
 			list.add("Mix Veg sandwich");
+			list.add("Tuna Fish sandwich");
 		};
 
 		consumer.accept(sandwichList);
