@@ -37,5 +37,7 @@ public class Java8Demo {
 		System.out.println("Count = " + stats.getCount());
 		System.out.println("Sum = " + stats.getSum());
 		System.out.println("Average = " + stats.getAverage());
+		System.out.println("Max = " + stats.getMax());
+		System.out.println("Min = " + stats.getMin());
 	}
 }
