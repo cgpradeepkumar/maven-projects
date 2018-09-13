@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public final class MyString implements Serializable {
 
-    private String string;
+    private final String string;
 
-    public MyString(String string) {
+    public MyString(final String string) {
         this.string = string;
     }
 
