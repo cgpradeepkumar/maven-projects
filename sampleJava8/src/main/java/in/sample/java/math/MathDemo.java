@@ -5,5 +5,8 @@ public class MathDemo {
         System.out.println("math functions demo");
         double a = Math.ceil(3.3);
         System.out.println(a);
+
+        double b = Math.floor(3.3);
+        System.out.println(b);
     }
 }
