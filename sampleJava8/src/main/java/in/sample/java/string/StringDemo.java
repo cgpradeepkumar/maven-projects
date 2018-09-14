@@ -33,5 +33,15 @@ public class StringDemo {
 
         MyString myString = new MyString("Pradeep");
         System.out.println(myString.getString());
+
+        StringBuffer buffer = new StringBuffer();
+        buffer.append("Pradeep");
+        buffer.append("Kumar");
+        System.out.println(buffer);
+
+        StringBuilder builder = new StringBuilder();
+        builder.append("Pradeep");
+        builder.append("Kumar");
+        System.out.println(builder);
     }
 }
