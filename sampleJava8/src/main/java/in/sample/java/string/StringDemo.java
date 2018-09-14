@@ -38,5 +38,10 @@ public class StringDemo {
         buffer.append("Pradeep");
         buffer.append("Kumar");
         System.out.println(buffer);
+
+        StringBuilder builder = new StringBuilder();
+        builder.append("Pradeep");
+        builder.append("Kumar");
+        System.out.println(builder);
     }
 }
