@@ -19,6 +19,11 @@ public class RestBooksApi {
 
 	public static void main(String[] args) {
 		SpringApplication.run(RestBooksApi.class, args);
+		try {
+			System.out.println(getEntity());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	public static JSONObject getEntity() throws Exception {

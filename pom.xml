@@ -6,7 +6,11 @@
 
     <groupId>com.samples</groupId>
     <artifactId>IdeaProjects</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>JiraIntegrationSample</module>
+    </modules>
 
 
 </project>
