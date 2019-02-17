@@ -1,15 +1,13 @@
 package com.sample.jira.integration.client;
 
 import com.atlassian.jira.rest.client.api.JiraRestClient;
+import com.atlassian.jira.rest.client.api.domain.BasicProject;
 import com.atlassian.jira.rest.client.api.domain.Issue;
-import com.atlassian.jira.rest.client.api.domain.User;
 import com.atlassian.jira.rest.client.internal.async.AsynchronousJiraRestClientFactory;
 import com.atlassian.util.concurrent.Promise;
-import org.json.JSONObject;
 import org.springframework.stereotype.Service;
 
 import java.net.URI;
-import java.util.concurrent.ExecutionException;
 
 @Service
 public class JrjcJiraRestClient {
@@ -17,25 +15,32 @@ public class JrjcJiraRestClient {
     private String url = "https://pradeepkumarcg.atlassian.net/";
     private String username = "cgpradeepkumar@gmail.com";
     private String password = "password123";
+    private String apiToken = "sYsQCH2xCKBLFr5vtKxE7C1D";
 
-    public JSONObject getEntity() {
+    public String getIssue(String issueId) {
+        String result = "";
         URI uri = URI.create(this.url);
         JiraRestClient jiraRestClient = new AsynchronousJiraRestClientFactory().createWithBasicHttpAuthentication(uri, username, password);
-        /*Promise<User> promise = jiraRestClient.getUserClient().getUser("admin");
-        try {
-            User user = promise.claim();
-            System.out.println(user.getEmailAddress());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }*/
-        Promise<Issue> promise = jiraRestClient.getIssueClient().getIssue("SAM-1");
+
+        Promise<Issue> promise = jiraRestClient.getIssueClient().getIssue(issueId);
         try {
             Issue issue = promise.claim();
-            System.out.println(issue.getSummary());
+            result = issue.getSummary();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return null;
+        return result;
+    }
+
+    public void getProjects() {
+        URI uri = URI.create(this.url);
+        JiraRestClient jiraRestClient = new AsynchronousJiraRestClientFactory().createWithBasicHttpAuthentication(uri, username, password);
+        Promise<Iterable<BasicProject>> promise = jiraRestClient.getProjectClient().getAllProjects();
+
+        Iterable<BasicProject> iterable = promise.claim();
+        iterable.forEach(basicProject -> {
+            System.out.println(basicProject.getName());
+        });
     }
 }
