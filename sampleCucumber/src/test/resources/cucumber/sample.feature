@@ -12,6 +12,17 @@ Feature: Sample
     
   Scenario: 2 Course In Play
     Given There are 2 credits for some course in Play
+    
+    Given I love play
+    Given I adore play
+    Given I like play
+    
+   Scenario: Data tables
+   	Given I have the following details for play
+     | course      | miles    | credits |
+     | Nightwatch  |   200    |  1      |
+     | Artillery   |   150    |  1.5    |
+     | Maven       |   100    |  1.5    |
 
 #  Scenario Outline: Title of your scenario outline
 #    Given I want to write a step with <name>
