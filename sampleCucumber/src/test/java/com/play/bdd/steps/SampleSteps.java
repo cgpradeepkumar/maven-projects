@@ -2,6 +2,8 @@ package com.play.bdd.steps;
 
 import java.util.Map;
 
+import com.play.bdd.order.OrderItem;
+
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Given;
 
@@ -25,4 +27,15 @@ public class SampleSteps {
 			System.out.println(String.format("play details %s %s at the credit of %s", miles, course, credit));
 		}
 	}
+
+	@Given("^I have a datatale to check$")
+	public void i_hav_a_datatale_to_check(DataTable dataTable) {
+		for (OrderItem orderItem : dataTable.asList(OrderItem.class)) {
+			String name = orderItem.getName();
+			String marks = orderItem.getMarks();
+			String percentage = orderItem.getPercentage();
+			System.out.println(String.format("%s got %s marks and %s percentage", name, marks, percentage));
+		}
+	}
+
 }

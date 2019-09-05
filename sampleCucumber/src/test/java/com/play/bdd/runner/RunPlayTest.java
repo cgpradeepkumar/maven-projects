@@ -7,7 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(format = { "pretty", "html:target/cucumber" }, features = { "src/test/resources/cucumber/play.feature",
-		"src/test/resources/cucumber/sample.feature" }, glue = "com.play.bdd.steps")
+		"src/test/resources/cucumber/sample.feature",
+		"src/test/resources/cucumber/data_table.feature" }, glue = "com.play.bdd.steps")
 public class RunPlayTest {
 
 }
