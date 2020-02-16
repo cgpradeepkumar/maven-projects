@@ -9,6 +9,8 @@
     <modules>
         <module>JiraIntegrationSample</module>
     <module>sampleActivitiBpm</module>
+    <module>sample-feign-service-client</module>
+    <module>sample-feign-service</module>
   </modules>
 
 
