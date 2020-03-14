@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>com.samples.java</groupId>
 		<artifactId>java-projects</artifactId>
-		<version>1.0-SNAPSHOT</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.samples.java.cxf</groupId>
 	<artifactId>sample-cxf-order-app</artifactId>
 	<packaging>war</packaging>
-	<version>1.0-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>sample-cxf-order-app</name>
 	<url>http://maven.apache.org</url>
 
