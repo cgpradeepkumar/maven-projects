@@ -1,1 +1,0 @@
-mvn archetype:generate -DgroupId=in.sample.java -DartifactId=sampleSpringRESTClient -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
