@@ -9,6 +9,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import com.samples.java.feign.client.SampleFeignServiceClient;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class SampleFeignServiceClientTest {

@@ -22,6 +22,8 @@
 		<module>sample-consume-NYTApi</module>
 		<module>sample-feign-service</module>
 		<module>sample-feign-service-client</module>
+		<module>sample-spring-rest</module>
+		<module>sample-spring-rest-client</module>
 	</modules>
 
 	<build>
