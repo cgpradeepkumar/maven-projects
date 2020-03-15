@@ -1,0 +1,1 @@
+mvn archetype:generate -DgroupId=in.sample.java.feign.client -DartifactId=sample-feign-service-client -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false

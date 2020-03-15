@@ -20,6 +20,8 @@
 		<module>jira-integration-sample</module>
 		<module>sample-activiti-bpm</module>
 		<module>sample-consume-NYTApi</module>
+		<module>sample-feign-service</module>
+		<module>sample-feign-service-client</module>
 	</modules>
 
 	<build>
