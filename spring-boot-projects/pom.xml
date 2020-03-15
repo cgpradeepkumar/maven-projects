@@ -19,6 +19,7 @@
 		<module>hospital-rest-api</module>
 		<module>jira-integration-sample</module>
 		<module>sample-activiti-bpm</module>
+		<module>sample-consume-NYTApi</module>
 	</modules>
 
 	<build>
