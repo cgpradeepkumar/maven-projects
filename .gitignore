@@ -1,5 +1,4 @@
-/META-INF/
-/bin/
-/target/
-*.*
+META-INF/
+bin/
+target/
 .*

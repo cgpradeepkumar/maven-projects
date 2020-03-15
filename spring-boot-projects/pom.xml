@@ -18,6 +18,7 @@
 	<modules>
 		<module>hospital-rest-api</module>
 		<module>jira-integration-sample</module>
+		<module>sample-activiti-bpm</module>
 	</modules>
 
 	<build>
