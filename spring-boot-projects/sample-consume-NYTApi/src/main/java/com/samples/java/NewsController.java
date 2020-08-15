@@ -15,7 +15,6 @@ public class NewsController {
 
 	@RequestMapping(value = "/topstories", method = RequestMethod.GET)
 	public @ResponseBody News getNews() throws Exception {
-
 		return newsService.getTopStories();
 	}
 
