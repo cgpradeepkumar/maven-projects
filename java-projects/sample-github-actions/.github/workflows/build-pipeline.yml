@@ -1,0 +1,11 @@
+name: Build Pipeline
+
+on: push
+
+jobs:
+  maven-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo
+        run: |
+          echo "testing building pipeline"
